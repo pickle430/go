@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #origin{
+            border: 1px solid #333;
+            float: left;
+            margin: 50px;
+        }
+        #origin div{
+            width: 350px;
+            height: 200px;
+            transition: all 0.5s ease;
+
+        }
+        #origin div img{
+            width: 100%;
+        }
+
+
+
+        .translate:hover{
+            transform: translate(50px, 50px);
+            opacity: 0.5;
+        }
+        .translateX:hover{
+            transform: translateX(50px);
+        }
+        .translateY:hover{
+            transform: translateY(50px);
+        }
+
+        .scale:hover{
+            transform: scale(2);
+        }
+        .scaleX:hover{
+            transform: scaleX(0.5);
+        }
+        .scaleY:hover{
+            transform: scaleY(0.8);
+        }
+
+        .rotateA:hover{
+            transform: rotate(180deg);
+        }
+        .rotateB:hover{
+            transform: rotate(-180deg);
+        }
+
+        .skew:hover{
+            transform: skew(30deg,30deg);
+        }
+        .skewX:hover{
+            transform: skewX(45deg);
+        }
+        .skewY:hover{
+            transform: skewY(45deg);
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="origin">
+        <div class="skew">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="skewX">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="skewY">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
