@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #origin{
+            border: 1px solid #333;
+            float: left;
+            margin: 50px;
+            perspective: 1000px;
+        }
+        #origin div{
+            width: 350px;
+            height: 200px;
+            transition: all 0.5s ease;
+
+        }
+        #origin div img{
+            width: 100%;
+        }
+
+
+
+        .translate:hover{
+            transform: translate(50px, 50px);
+            opacity: 0.5;
+        }
+        .translateX:hover{
+            transform: translateX(50px);
+        }
+        .translateY:hover{
+            transform: translateY(50px);
+        }
+
+
+        .translate3d:hover{
+            transform: translate3d(50px,20px,-300px);
+        }
+        .translateZ:hover{
+            transform: translateZ(-500px);
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    
+
+    <div id="origin">
+        <div class="translate">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateX">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateY">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    
+    <div id="origin">
+        <div class="translate3d">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="translateZ">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    
+</body>
+</html>
