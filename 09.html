@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+<!-- 
+    1-왼쪽에서효과
+    2-아래에서 효과
+    3-
+    4-버튼에 그림자멀어지는 효과
+ -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+        h1{
+            margin: 50px 0 30px;
+            position: relative;
+
+        }
+        h1::after{
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 200px;
+            height: 2px;
+            transform: translateX(-50%) scaleX(0%);
+            background-color: deepskyblue;
+            transition: transform 0.5s ease;
+        }
+        h1:hover::after{
+            width: 200px;
+            transform: translateX(-50%) scaleX(100%);
+        }
+        #wrap .list{
+            
+        }
+        #wrap .list li{
+            width: 350px;
+            height: 200px;
+            float: left;
+            margin-right: 40px;
+            border: 2px solid #ddd;
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        .list li:last-child{
+            margin-right: 0;
+        }
+        .list li img{
+            width: 100%;
+            transition: 0.5s;
+            /* opacity: 1; */
+        }
+
+        .left_box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(245, 222, 179,0.7);
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+        .left_box h3{color: white;
+            font-weight: bold;
+        padding-top: 90px;}
+
+        .list li:nth-child(1):hover .left_box{
+            transform: translateX(0);
+        }
+
+
+        .list li:nth-child(2) span{
+            background-color: deeppink;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            /* float: left; */
+            transition: top 0.5s ease, opacity 0.5s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,250%);
+            line-height: 80px;
+            color: white;
+            opacity: 0;
+
+            /* transform: translateY(-100%); */
+        }
+        .list li:nth-child(2):hover span{
+            transform: translate(-50%,-50%);
+            opacity: 1;
+        }
+        .list li:nth-child(2):hover img{
+            transform: scale(1.05, 1.05);
+        }
+
+        
+        #wrap .list li:nth-child(3){
+            perspective: 1000px;
+            overflow: visible;
+        }
+        .list li:nth-child(3) .inner{
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            backface-visibility: visible;
+            transition: all 1s ease;
+        }
+        .list li:nth-child(3) .inner div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .list li:nth-child(3):hover .inner{
+            transform: rotateY(180deg);
+        }
+
+
+        .list li:nth-child(3) .inner .front{
+
+        }
+        .list li:nth-child(3) .inner .back{
+            background-color: deepskyblue;
+            text-align: center;
+            color: #fff;
+            line-height: 200px;
+            transform: rotateY(180deg);
+        }
+
+
+
+
+
+
+
+
+        .clear::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        .btn{
+            width: 200px;
+            height: 50px;
+            background-color: deepskyblue;
+            border: none;
+            display: block;
+            margin: 50px auto;
+            color: white;
+            box-shadow:0 0 0 black;
+            transition: 1s;
+            
+        }
+        .btn:hover{
+            background-color: aquamarine;
+            box-shadow: 5px 5px 5px black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>상품 리스트</h1>
+        <ul class="list clear">
+            <li>
+                <img src="test.jpg" alt="배너">
+                <div class="left_box">
+                    <h3>특가상품 바로가기></h3>
+                </div>
+            </li>
+            <li><img src="test.jpg" alt="배너">
+            <span>SALE</span></li>
+            <li>
+                <div class="inner">
+                    <div class="front">
+                        <img src="test.jpg" alt="앞">
+                    </div>
+                    <div class="back">
+                        <h3>특가상품 바로가기></h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <button class="btn">구매하기</button>
+    </div>
+</body>
+</html>

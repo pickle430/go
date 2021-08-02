@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #origin{
+            border: 1px solid #333;
+            float: left;
+            margin: 50px;
+            perspective: 250px;
+        }
+        #origin div{
+            width: 350px;
+            height: 200px;
+            transition: all 0.5s ease;
+
+        }
+        #origin div img{
+            width: 100%;
+        }
+
+
+
+        .translate:hover{
+            transform: translate(50px, 50px);
+            opacity: 0.5;
+        }
+        .translateX:hover{
+            transform: translateX(50px);
+        }
+        .translateY:hover{
+            transform: translateY(50px);
+        }
+
+        .scale:hover{
+            transform: scale(2);
+        }
+        .scaleX:hover{
+            transform: scaleX(0.5);
+        }
+        .scaleY:hover{
+            transform: scaleY(0.8);
+        }
+
+        .rotateA:hover{
+            transform: rotate(80deg);
+        }
+        .rotateB:hover{
+            transform: rotate(-80deg);
+        }
+        .rotateX:hover{
+            transform: rotateX(80deg);
+        }
+        .rotateY:hover{
+            transform: rotateY(-80deg);
+        }
+        .rotate3d:hover{
+            transform: rotate3d(0.7,0.2,1,30deg);
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    
+    <div id="origin">
+        <div class="rotateA">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateB">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateX">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateY">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotate3d">
+            <img src="test.jpg" alt="배너">
+        </div>
+    </div>
+
+    
+</body>
+</html>

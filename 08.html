@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        #wrap{
+            width: 350px;
+            height: 200px;
+            margin: 100px auto;
+            border: 2px solid #333;
+            perspective: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        #wrap img{
+            width: 100%;
+            transition: 1s;
+            
+        }
+        #wrap img:hover{
+            transform: scale(1.05,1.05);
+            /* overflow: hidden; */
+        }
+
+        #wrap span{
+            width: 80px;
+            height: 80px;
+            background-color: deeppink;
+            border-radius: 50%;
+            position: absolute;
+            /* margin-top: -40px;
+            margin-left: -40px; */
+            left:50%;
+            top:-50%;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        #wrap:hover spanlk{
+            top: 50%;
+            opacity: 1;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="wrap">
+        <img src="test.jpg" alt="banner">
+      <span>SALE</span>
+    </div>
+</div>
+</body>
+</html>

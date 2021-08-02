@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+
+
+        .menu{
+            /* width: 100%; */
+            /* width: 100px; */
+            width: 100px;
+            height: 40px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+            font-size: 30px;
+            overflow: hidden;
+            
+            
+        }
+        .menu::after{
+            width: 100%;
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-150%,-50%);
+            margin-top: 20px;
+            transition: 0.5s;
+            
+        }
+      
+        .menu:hover::after{
+            
+            transform: translate(-50%,-50%);
+            
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="menu">Menu</div>
+</body>
+</html>
